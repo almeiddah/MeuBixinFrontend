@@ -62,12 +62,14 @@ textarea:focus, input:focus, select:focus {
     color: rgba(0, 0, 0, 0.80);
 }
 .itens .item_1{
+    display: flex;
+    align-items: center;
     padding-right: 3px;
     color: rgba(0, 0, 0, 0.45);
 }
 .itens .minha_lista{
     text-decoration: none;
-    padding-left: 7px;
+    padding-left: 8px;
     border:none;
     background-color: white;
     font-family: Poppins;
