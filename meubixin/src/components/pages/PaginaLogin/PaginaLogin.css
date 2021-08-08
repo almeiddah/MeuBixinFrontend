@@ -80,7 +80,7 @@ h2{
 .direito .campos .senha{
     margin-bottom: 20px;
 }
-button{
+.entrar{
     margin-top: 25px;
     border:none;
     display: flex;

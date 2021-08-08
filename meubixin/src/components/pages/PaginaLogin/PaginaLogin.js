@@ -17,7 +17,7 @@ export function PaginaLogin(){
                         <input placeholder="Digite sua senha" type="password" className="senha"></input>               
                         <h2>Esqueceu sua senha?</h2>
                     </div>
-                    <button>Entrar</button>
+                    <button className="entrar">Entrar</button>
                    
                 </div>
                 

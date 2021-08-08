@@ -1,0 +1,107 @@
+.navbar{
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 65px;
+    width: 100vw;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+    align-items: center;
+}
+.navbar .logo{
+    margin-left: 100px;
+
+}
+.navbar .logo .logo1{
+    margin-top: 5px;
+    width: 160px;
+}
+ 
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.navbar .pesquisar{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-left: 5%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    background: #F7F7F7;
+    border-radius: 5px;
+    font-size: 19px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.45);
+    width: 35%;
+  
+}
+.navbar .pesquisar input{
+    padding-left: 10px;
+    font-size: 17px;
+    width: 500px;
+    background: #F7F7F7;
+    height: 41px;
+    border: none;
+}
+.itens{
+    margin-left: 4%;
+    display: flex;
+    width: 25%;
+    justify-content: space-evenly;
+    margin-right: 2%;
+    
+}
+.itens .item_2{
+    border-left: 2px solid hsl(0, 0%, 0%, 0.18);
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: rgba(0, 0, 0, 0.80);
+}
+.itens .item_1{
+    padding-right: 3px;
+    color: rgba(0, 0, 0, 0.45);
+}
+.itens .minha_lista{
+    text-decoration: none;
+    padding-left: 7px;
+    border:none;
+    background-color: white;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.60);
+    letter-spacing: 0.02em;
+    
+}
+.itens .usuario{
+    text-decoration: none;
+    padding-left: 10px;
+    border:none;
+    background-color: white;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.80);
+    letter-spacing: 0.02em;
+}
+.itens .item_1:hover, .minha_lista:hover, .usuario:hover , .item_2:hover{
+    color: hsla(209, 100%, 36%);
+}
+.navbar .sair{
+    margin-left: auto;
+    margin-right: 100px;
+    font-weight: 500;
+    color: hsla(209, 100%, 36%);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+}
+
+
