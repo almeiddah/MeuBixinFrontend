@@ -12,8 +12,8 @@
 
 }
 .navbar .logo .logo1{
-    margin-top: 5px;
-    width: 160px;
+    margin-top: 7px;
+    width: 140px;
 }
  
 textarea:focus, input:focus, select:focus {
@@ -88,7 +88,7 @@ textarea:focus, input:focus, select:focus {
     background-color: white;
     font-family: Poppins;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 17px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.80);
