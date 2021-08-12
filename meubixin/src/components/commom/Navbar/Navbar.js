@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import { FiSearch } from "react-icons/fi";
 import {FiHeart} from "react-icons/fi";
 import {FiUser} from "react-icons/fi";
+import { Link } from "react-router-dom";
 export function Navbar(){
     
     return <div className="navbar">
@@ -25,6 +26,6 @@ export function Navbar(){
                     <a href="#" className="usuario"> João Mendoza</a>
                 </div>
             </div>
-            <a href="#" className="sair">SAIR</a>
+            <Link exact to="/cadastrar" className="sair">SAIR</Link>
     </div>
 }

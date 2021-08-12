@@ -1,10 +1,9 @@
-import { Banner } from "../../commom/Banner/Banner";
-import { Navbar } from "../../commom/Navbar/Navbar";
+
 import { useForm } from 'react-hook-form';
 import axios from "axios";
 
-function FormCadastro(){
-    
+
+function FormCadastro(){ 
     const {register, handleSubmit} = useForm();
     const submeter = (usuario)=>{
         axios({
@@ -48,8 +47,6 @@ function FormCadastro(){
 export function PaginaCadastro(){
     return(
         <div>
-            <Navbar></Navbar>
-            <Banner></Banner>
             <FormCadastro></FormCadastro>
 
         </div>

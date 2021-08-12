@@ -12,9 +12,9 @@ function App() {
     <div>
       <Router history={history}>
 
-        <Route exact path='/' component={PaginaLogin}></Route>
-        <Route exact path='/cadastrar' component={PaginaCadastro}></Route>
-        <Route exact path='/home' component={PaginaHome}></Route>
+        <Route exact path="/" component={PaginaLogin}></Route>
+        <Route exact path="/cadastrar" component={PaginaCadastro}></Route>
+        <Route exact path="/home" component={PaginaHome}></Route>
         
       </Router>
             

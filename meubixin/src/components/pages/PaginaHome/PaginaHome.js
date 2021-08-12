@@ -7,5 +7,6 @@ export function PaginaHome(){
             <Navbar></Navbar>
             <Banner></Banner>
             <Categoria></Categoria>
+   
     </div>
 }
