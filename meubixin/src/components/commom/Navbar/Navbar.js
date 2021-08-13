@@ -26,6 +26,6 @@ export function Navbar(){
                     <a href="#" className="usuario"> João Mendoza</a>
                 </div>
             </div>
-            <Link exact to="/cadastrar" className="sair">SAIR</Link>
+            <Link exact to="/" className="sair">SAIR</Link>
     </div>
 }

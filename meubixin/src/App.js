@@ -4,19 +4,16 @@ import { PaginaLogin } from './components/pages/PaginaLogin/PaginaLogin';
 import { PaginaHome } from './components/pages/PaginaHome/PaginaHome';
 import { PaginaCadastro } from './components/pages/PaginaCadastrarUser/PaginaCadastrarUser'
 
-import {Router, Route} from 'react-router-dom';
-import history from './history';
+import {Router, Route, BrowserRouter} from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      <Router history={history}>
-
-        <Route exact path="/" component={PaginaLogin}></Route>
-        <Route exact path="/cadastrar" component={PaginaCadastro}></Route>
+      <BrowserRouter>
+        <Route exact path="/" component={PaginaLogin}/>
+        <Route exact path="/cadastrar" component={PaginaCadastro}/>
         <Route exact path="/home" component={PaginaHome}></Route>
-        
-      </Router>
+      </BrowserRouter>
             
    </div>
   );

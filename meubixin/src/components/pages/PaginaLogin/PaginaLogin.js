@@ -3,17 +3,18 @@ import logo from './logo.svg';
 import img from './img.png';
 import {useForm} from "react-hook-form";
 import axios from "axios";
-import { Link, NavLink } from "react-router-dom";
-import history from "../../../history";
+import { Link} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 
 export function FormularioLogin(){
     
     const {register,handleSubmit} = useForm();
-    
+    let history = useHistory();
+
     const submeter = (login) =>{
-        return axios({
+       axios({
             method: "POST",
             url:"http://localhost:8393/usuarios/signin",
             data: login,
@@ -24,7 +25,6 @@ export function FormularioLogin(){
                 console.log(error);
         })
     };
-    console.log("entrei");
     return (
 
 
@@ -34,9 +34,8 @@ export function FormularioLogin(){
             <h2 className="esqueceu_senha">Esqueceu sua senha?</h2>
             <button className="entrar">Entrar</button>
             <div className="conta">
-                <a className="conta_texto">Não tem conta? </a><Link className="link" to="/cadastrar"> Clique aqui</Link>
+                <span className="conta_texto">Não tem conta? </span><Link to="/cadastrar" className="link"> Clique aqui</Link>
             </div>
-            
         </form>
     )
 }
@@ -54,13 +53,8 @@ export function PaginaLogin(){
                     <h1 className="titulo">Login</h1>
                     <h2 className="sub">Não perca a possibilidade de ter um novo<br></br> amiguinho ou de alegrar a vida dos que já tem!</h2>
                     <div className="campos">
-                        entrei
-                        
                         <FormularioLogin></FormularioLogin>
-                        
                     </div>
-                    
-                   
                 </div>
                 
             </div>

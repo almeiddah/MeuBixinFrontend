@@ -1,6 +1,7 @@
 
 import { useForm } from 'react-hook-form';
 import axios from "axios";
+import history from "../../../history";
 
 
 function FormCadastro(){ 
@@ -12,6 +13,8 @@ function FormCadastro(){
             data:usuario,
         }).then((response)=>{
             console.log(response);
+            history.push("/login");
+
         }).catch((error)=>{
             console.log(error);
         })
