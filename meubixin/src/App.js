@@ -11,7 +11,7 @@ export const AuthContext = createContext(null);
 
 function App() {
 
-  const [auth, setAuth] = useState({token:localStorage.getItem("token"),nome_completo:localStorage.getItem("nome_completo")})
+  const [auth, setAuth] = useState({token:localStorage.getItem("token"),nome_completo:localStorage.getItem("nome_completo")});
   const setAuthLS = (newAuth) =>{
     setAuth(newAuth);
     localStorage.setItem("token",newAuth.token);

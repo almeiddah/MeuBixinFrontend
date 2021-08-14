@@ -10,7 +10,7 @@ function FormCadastro(){
     const submeter = (usuario)=>{
        cadastrar(usuario).then((response)=>{
             console.log(response);
-            history.push("/login");
+            history.push("/");
 
         }).catch((error)=>{
             console.log(error);

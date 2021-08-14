@@ -8,12 +8,11 @@ import { AuthContext } from "../../../App";
 import { useContext } from "react";
 
 export function Navbar(){
-
+    
     const {auth} = useContext(AuthContext);
-    console.log("auth");
-    console.log(auth);
+    const {setAuth} = useContext(AuthContext);
+   
     return <div className="navbar">
-            
             <div className="logo">
                 <img src={logo} className="logo1"/>
             </div>
@@ -32,6 +31,6 @@ export function Navbar(){
                     <a href="#" className="usuario"> {auth.nome_completo}</a>
                 </div>
             </div>
-            <Link exact to="/" className="sair">SAIR</Link>
+            <Link exact to="/" className="sair" onClick={()=> setAuth({token:null,nome_completo:null})} >SAIR</Link>
     </div>
 }

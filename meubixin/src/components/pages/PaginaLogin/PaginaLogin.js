@@ -21,7 +21,7 @@ export function FormularioLogin(){
         logar(login_dados)
         .then(
                 (response)=>{
-                    auth.setAuth({token:response.data.token})
+                    auth.setAuth({token:response.data.token, nome_completo: response.data.nome_completo})
                     history.push("/home");
                 }
                 
