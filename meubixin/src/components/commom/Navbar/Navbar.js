@@ -4,8 +4,14 @@ import { FiSearch } from "react-icons/fi";
 import {FiHeart} from "react-icons/fi";
 import {FiUser} from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../App";
+import { useContext } from "react";
+
 export function Navbar(){
-    
+
+    const {auth} = useContext(AuthContext);
+    console.log("auth");
+    console.log(auth);
     return <div className="navbar">
             
             <div className="logo">
@@ -23,7 +29,7 @@ export function Navbar(){
 
                 <div className="item_2">
                     <FiUser/>
-                    <a href="#" className="usuario"> João Mendoza</a>
+                    <a href="#" className="usuario"> {auth.nome_completo}</a>
                 </div>
             </div>
             <Link exact to="/" className="sair">SAIR</Link>

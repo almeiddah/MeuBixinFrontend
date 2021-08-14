@@ -5,25 +5,31 @@ import {useForm} from "react-hook-form";
 import axios from "axios";
 import { Link} from "react-router-dom";
 import { useHistory } from "react-router-dom";
-
-
-
+import { useContext } from "react";
+import {logar} from "../../../api/auth"
+import { AuthContext } from "../../../App";
+import history from "../../../history";
 export function FormularioLogin(){
     
-    const {register,handleSubmit} = useForm();
+    
     let history = useHistory();
 
-    const submeter = (login) =>{
-       axios({
-            method: "POST",
-            url:"http://localhost:8393/usuarios/signin",
-            data: login,
-        }).then((response)=>{
-            console.log(response);
-            history.push("/home");
-        }).catch((error)=>{
-                console.log(error);
-        })
+    const auth = useContext(AuthContext); //importando o token
+    const {register,handleSubmit} = useForm();
+
+    const submeter = (login_dados) =>{
+        logar(login_dados)
+        .then(
+                (response)=>{
+                    auth.setAuth({token:response.data.token})
+                    history.push("/home");
+                }
+                
+        ).catch(
+                (error)=>{
+                    console.log(error);
+                }
+        )
     };
     return (
 

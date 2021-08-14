@@ -2,16 +2,13 @@
 import { useForm } from 'react-hook-form';
 import axios from "axios";
 import history from "../../../history";
+import { cadastrar } from '../../../api/auth';
 
 
 function FormCadastro(){ 
     const {register, handleSubmit} = useForm();
     const submeter = (usuario)=>{
-        axios({
-            method: "POST",
-            url: "http://localhost:8393/usuarios",
-            data:usuario,
-        }).then((response)=>{
+       cadastrar(usuario).then((response)=>{
             console.log(response);
             history.push("/login");
 
