@@ -8,8 +8,8 @@ import { AuthContext } from "../../../App";
 import { useContext } from "react";
 
 export function Navbar(){
-    
-    const {auth} = useContext(AuthContext);
+
+    const {auth} = useContext(AuthContext); //pegar token e nome
     const {setAuth} = useContext(AuthContext);
    
     return <div className="navbar">
