@@ -8,10 +8,14 @@ export function Card({post, decisor}){
     let imagem_usada;
     if(decisor == 1){
         imagem_usada = img;
+        console.log("Acessórios");
     }else{
         imagem_usada = img2;
         
+        
     }
+    let fornecedor = post.usuario;
+
     return (
         <div className = "card">
              
@@ -24,19 +28,19 @@ export function Card({post, decisor}){
                         <img src={avaliacao_img} className="avaliacao"/>
                     </div>
                     <div className="ofertante">
-                            Petlove
+                       {fornecedor.nome_completo}
                     </div>
                 </div>
                 <div className="dados_produto">
                 <div className="nome">
-                        {post.Nome}
+                        {post.nome_produto}
                     </div>
                     <div className="preco">
                         <div className="cifrao">
                         R$
                         </div>
                         <div className="preco_numero">
-                        {post.Preço}
+                        {post.valor_produto}
                         </div>
                             
                     </div>

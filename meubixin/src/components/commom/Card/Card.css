@@ -4,10 +4,10 @@ body{
 .card{
     padding: 25px 33px 20px 33px;
     width: 236px;
-    height: 246px;
     background-color: #F5F5F5;
     border-radius: 10px;
     transition: 0.5s;
+    position: relative;
 }
 .card:hover{
     background-color: white;
@@ -30,7 +30,12 @@ body{
     margin-left: auto;
     opacity: 0.45;
 }
+.add_lista:hover{
+    color: #005EB8;
+    opacity: 1;
+    transition: 0.5s;
 
+}
 .avaliacao_e_ofertante .ofertante{
     font-size: 14px;
     line-height: 21px;
@@ -45,6 +50,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 5px;
 }
 
 .dados_produto .nome{

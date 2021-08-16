@@ -6,6 +6,8 @@ import { PaginaCadastro } from './components/pages/PaginaCadastrarUser/PaginaCad
 
 import {Router, Route, BrowserRouter} from 'react-router-dom';
 import { createContext, useState } from 'react';
+import { PaginaInserirOferta } from './components/pages/PaginaInserirOferta/PaginaInserirOferta';
+import { PaginaHomeServicos } from './components/pages/PaginaHomeServicos/PaginaHomeServicos';
 
 export const AuthContext = createContext(null);
 
@@ -25,6 +27,8 @@ function App() {
           <Route exact path="/" component={PaginaLogin}/>
           <Route exact path="/cadastrar" component={PaginaCadastro}/>
           <Route exact path="/home" component={PaginaHome}></Route>
+          <Route exact path="/PaginaHomeextend" component={PaginaInserirOferta}></Route>
+          <Route exact path="/home/servicos" component={PaginaHomeServicos}></Route>
         </BrowserRouter>
       </AuthContext.Provider>
    </div>

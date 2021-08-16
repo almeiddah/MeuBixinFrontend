@@ -1,3 +1,4 @@
+
 .categoria{
     overflow-x: hidden; overflow-y: hidden;
     margin-top: 50px;
@@ -39,10 +40,11 @@
     align-items: center;
     width: 190px;
     justify-content: space-evenly;
+  
 }
-
 .active{
     color: #005EB8;
     font-weight: 500;
     border-bottom: 2px solid #005EB8;
+
 }

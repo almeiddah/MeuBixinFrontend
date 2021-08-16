@@ -4,10 +4,10 @@ import { AuthContext } from "../../../App";
 import { Banner } from "../../commom/Banner/Banner";
 import { Card } from "../../commom/Card/Card";
 import { Card_modelo_2 } from "../../commom/Card_modelo_2/Card_modelo_2";
+import { Card_modelo_3 } from "../../commom/Card_modelo_3/Card_modelo_3";
 import { Categoria } from "../../commom/Categoria/Categoria";
 import { Navbar } from "../../commom/Navbar/Navbar";
 import "./PaginaHome.css";
-
 
 
 export function Conteudo({produtos, decisor}){
@@ -22,6 +22,16 @@ export function Conteudo({produtos, decisor}){
 
 export function ConteudoDiversao({produtos}){
     let posts = produtos.map((post)=>(<Card_modelo_2 post={post}></Card_modelo_2>))
+
+    return ( 
+            <div className="conteudo_produtos_recentes">
+               {posts}
+            </div>
+            )
+}
+
+export function ConteudoArte({produtos}){
+    let posts = produtos.map((post)=>(<Card_modelo_3 post={post}></Card_modelo_3>))
 
     return ( 
             <div className="conteudo_produtos_recentes">
@@ -53,6 +63,7 @@ export function PaginaHome(){
         categoria = "brinquedo";
         listarProdutosPorTipo(categoria,auth.token).then(
             (response) =>{
+                
                 setProdutos_diversao(response.data);
             }).catch(
             (error=>{
@@ -75,6 +86,20 @@ export function PaginaHome(){
           )
       },[]);
 
+        // Produtos da área artistica
+        const [produtos_arte, setProdutos_arte] = useState([]);
+        useEffect(()=>{
+            categoria = "arte";
+            listarProdutosPorTipo(categoria,auth.token).then(
+                (response) =>{
+                    setProdutos_arte(response.data);
+                }).catch(
+                (error=>{
+                    console.log(error);
+                })
+            )
+        },[]);
+
 
     return <div className="home_pagina">
             <Navbar></Navbar>
@@ -83,7 +108,7 @@ export function PaginaHome(){
             <div className="produtos_recentes">
                 <div className="titulo"> 
                     <h1>Mais recentes</h1>
-                    <h2> Ver mais</h2>
+                    <h2>Ver mais</h2>
                 </div>
                 <Conteudo produtos={produtos} decisor="1"></Conteudo>
             </div>
@@ -102,6 +127,14 @@ export function PaginaHome(){
                     <h2> Ver mais</h2>
                 </div>
                 <Conteudo produtos={produtos_higienea} decisor="2"></Conteudo>
+            </div>
+
+            <div className="produtos_diversao">
+                <div className="titulo"> 
+                    <h1>Espaço artistico</h1>
+                    <h2> Ver mais</h2>
+                </div>
+               <ConteudoArte produtos={produtos_arte}></ConteudoArte>
             </div>
            
     </div>

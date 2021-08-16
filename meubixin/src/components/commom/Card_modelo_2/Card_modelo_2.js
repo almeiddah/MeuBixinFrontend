@@ -4,14 +4,15 @@ import avaliacao_img from './avaliacao.svg';
 import {FiHeart} from "react-icons/fi";
 
 export function Card_modelo_2({post}){
+    let fornecedor = post.usuario;
     return (
         <div className = "card2">
             <div className="conteudo_texto">
             <div className="nome2">
-                        {post.Nome}
+                        {post.nome_produto}
             </div>       
             <div className="ofertante2">
-                            Petlove
+                            {fornecedor.nome_completo}
             </div>
             <img src={avaliacao_img} className="avaliacao2"/>
 
@@ -20,7 +21,7 @@ export function Card_modelo_2({post}){
                     R$
                     </div>
                     <div className="preco_numero2">
-                    {post.Preço}
+                    {post.valor_produto}
                     </div>
                 </div>        
             </div>
