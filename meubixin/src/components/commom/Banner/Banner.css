@@ -33,26 +33,28 @@
     margin-left: 25px;
     margin-bottom: 40px;
     height: auto;
-    position: relative;
+
 }
-h1{
+.texto_botao h1{
     color: white;
     font-size: 36px;
+    margin-top: 0px;
     font-weight:700;
 }
-h2{
+.texto_botao h2{
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
+    margin-top: -15px;
     line-height: 30px;
     color: rgba(255, 255, 255, 0.95);
 
 }
 
 .texto_botao button{
-    position: absolute;
     bottom: 4px;
+    margin-top: 40px;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;

@@ -17,17 +17,17 @@ export function Navbar(){
                 <img src={logo} className="logo1"/>
             </div>
             <div className="pesquisar">
-            <FiSearch/>
+            <FiSearch  />
                 <input placeholder="Pesquisar por pets, produtos etc..."></input>
             </div>
             <div className="itens">
                 <div className="item_1">
-                    <FiHeart/>
+                    <FiHeart className="Fi"/>
                     <a href="#" className="minha_lista"> Minha lista</a>
                 </div>
 
                 <div className="item_2">
-                    <FiUser/>
+                    <FiUser className="Fi"/>
                     <a href="#" className="usuario"> {auth.nome_completo}</a>
                 </div>
             </div>

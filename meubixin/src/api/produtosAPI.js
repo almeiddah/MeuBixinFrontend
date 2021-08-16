@@ -7,6 +7,16 @@ export function listarProdutosHome(){ //Creio que aqui não precisa verificar to
     })
 }
 
+export function listarProdutos(token){
+    return axios({
+        method:"GET",
+        url: "http://localhost:8393/produtos/get",
+        headers: {
+            "token" : token,
+        }
+    })
+}
+
 export function listarProdutosPorLoja(id_loja){ 
     return axios({
         method: "GET",
@@ -15,12 +25,13 @@ export function listarProdutosPorLoja(id_loja){
     })
 }
 
-export function listarProdutosPorTipo(id_produto){ 
+
+export function listarProdutosPorTipo(categoria,token){ 
     return axios({
         method: "GET",
-        url: "http://localhost:8393/produtoscategoria/:id",
-        params: {
-            id: this.selectedRoute
+        url: "http://localhost:8393/produtoscategoria/" + categoria,
+        headers: {
+            "token" : token,
         }
     })
 }

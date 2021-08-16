@@ -27,6 +27,7 @@ textarea:focus, input:focus, select:focus {
     align-items: center;
     padding-left: 20px;
     margin-left: 5%;
+    margin-right: 0.5%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -47,9 +48,9 @@ textarea:focus, input:focus, select:focus {
     border: none;
 }
 .itens{
-    margin-left: 4%;
+    margin-left: 3%;
     display: flex;
-    width: 25%;
+    width: 23%;
     justify-content: space-evenly;
     margin-right: 2%;
     
@@ -93,6 +94,9 @@ textarea:focus, input:focus, select:focus {
     line-height: 20px;
     color: rgba(0, 0, 0, 0.80);
     letter-spacing: 0.02em;
+}
+.Fi{
+    font-size: 18px;
 }
 .itens .item_1:hover, .minha_lista:hover, .usuario:hover , .item_2:hover{
     color: hsla(209, 100%, 36%);

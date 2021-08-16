@@ -1,0 +1,77 @@
+/* Conteudo produtos recentes*/
+.produtos_recentes, .produtos_diversao{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.produtos_recentes .titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.produtos_recentes .titulo h1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.02em;
+
+    color: rgba(0, 0, 0, 0.8);
+
+}
+
+
+.produtos_recentes .titulo h2{
+    
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 36px;
+
+
+letter-spacing: 0.01em;
+
+color: rgba(0, 0, 0, 0.6);
+}
+
+.conteudo_produtos_recentes{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+/* Conteudo produtos diversao*/
+
+.produtos_diversao .titulo h1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.02em;
+
+    color: rgba(0, 0, 0, 0.8);
+
+}
+.produtos_diversao .titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.produtos_diversao .titulo h2{
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    
+    
+    letter-spacing: 0.01em;
+    
+    color: rgba(0, 0, 0, 0.6);
+    }

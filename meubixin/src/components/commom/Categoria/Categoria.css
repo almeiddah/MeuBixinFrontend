@@ -1,5 +1,6 @@
 .categoria{
-    margin-top: 60px;
+    overflow-x: hidden; overflow-y: hidden;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +20,7 @@
 
 .categoria .categorias{
     position: relative;
-    margin-top: 25px;
+    margin-top: 15px;
     width: 630px;
     height: 58px;
     display: flex;

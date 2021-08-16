@@ -2,13 +2,12 @@ import "./PaginaLogin.css";
 import logo from './logo.svg';
 import img from './img.png';
 import {useForm} from "react-hook-form";
-import axios from "axios";
+
 import { Link} from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { useContext } from "react";
 import {logar} from "../../../api/auth"
 import { AuthContext } from "../../../App";
-import history from "../../../history";
 export function FormularioLogin(){
     
     

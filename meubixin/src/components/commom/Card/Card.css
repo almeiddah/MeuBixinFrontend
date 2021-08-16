@@ -1,0 +1,80 @@
+body{
+    background-color: #FCFCFC;
+}
+.card{
+    padding: 25px 33px 20px 33px;
+    width: 236px;
+    height: 246px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.card:hover{
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.08);
+
+}
+.area_produto{
+    display: flex;
+    justify-content: center;
+}
+.img_produto{
+    width: 120px;
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 10px;
+    
+}
+.add_lista{
+    font-size: 28px;
+    margin-left: auto;
+    opacity: 0.45;
+}
+
+.avaliacao_e_ofertante .ofertante{
+    font-size: 14px;
+    line-height: 21px;
+    color: hsla(0, 0%, 0%, 0,6);
+    text-transform: uppercase;
+    font-weight: 400;
+
+}
+
+.dados_produto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dados_produto .nome{
+    color: hsla(0, 0%, 0%, 0,8);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    width: 100%;
+}
+
+.dados_produto .preco{
+    display: flex;
+
+}
+
+
+.dados_produto .preco .cifrao{
+    font-size: 14px;
+    font-weight: 400;
+    color: hsla(0, 0%, 0%, 0,8);
+    margin-right: 5px;
+    line-height: 14px;
+}
+
+.dados_produto .preco .preco_numero{
+    font-size: 30px;
+    font-weight: 700;
+    color: hsla(0, 0%, 0%, 0,8);
+    line-height: 28px;
+}
+
+
+
