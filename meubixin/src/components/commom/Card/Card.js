@@ -16,6 +16,7 @@ export function Card({post, decisor}){
     }
     let fornecedor = post.usuario;
 
+    var numero = post.valor_produto;
     return (
         <div className = "card">
              
@@ -40,7 +41,7 @@ export function Card({post, decisor}){
                         R$
                         </div>
                         <div className="preco_numero">
-                        {post.valor_produto}
+                        {new Intl.NumberFormat('pt-BR').format(numero)}
                         </div>
                             
                     </div>

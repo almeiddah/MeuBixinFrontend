@@ -1,5 +1,4 @@
 .card2{
-    cursor: pointer;
     padding: 25px 33px 20px 33px;
     width:  575px;
     height: 246px;
@@ -15,11 +14,11 @@
 
 }
 .conteudo_texto{
-    width: 100%;
+    width: 110%;
 }
 
 .add_lista2{
-    font-size: 28px;
+    font-size: 24px;
     opacity: 0.45;
 }
 .add_lista2:hover{
@@ -35,6 +34,7 @@
     color: rgba(0, 0, 0, 0.60);
     text-transform: uppercase;
     font-weight: 400;
+    margin-top: 10px;
     margin-bottom: 10px;
 
 }
@@ -42,14 +42,10 @@
 .nome2{
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 45px;
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 5px;
-}
-
-.avaliacao2{
-    margin-bottom: 30px;
 }
 .preco2{
     display: flex;
@@ -75,7 +71,7 @@
 .area_produto2{
     display: flex;
 }
-.img_produto_2{
-    width: 255px;
-    margin-right: 5px;
+.img_produto2{
+    width: 230px;
+    height: 230px;
 }

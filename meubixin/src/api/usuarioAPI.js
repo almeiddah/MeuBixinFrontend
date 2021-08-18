@@ -1,11 +1,11 @@
 import axios from "axios";
 
-export function listarUsuarioPorId(){ 
+export function listarUsuarioPorId(_id, token){ 
     return axios({
         method: "GET",
-        url: "http://localhost:8393/usuarios/:id",
-        params: {
-            id: this.selectedRoute
+        url: `http://localhost:8393/usuarios/${_id}`,
+        headers: {
+            "token":token
         }
     })
 }

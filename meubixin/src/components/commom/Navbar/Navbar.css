@@ -49,25 +49,26 @@ textarea:focus, input:focus, select:focus {
     border: none;
 }
 .itens{
+    
     margin-left: 3%;
     display: flex;
     width: 23%;
     justify-content: space-evenly;
     margin-right: 2%;
+    height: 100%;
     
 }
 .itens .item_2{
-    border-left: 2px solid hsl(0, 0%, 0%, 0.18);
     display: flex;
     align-items: center;
     padding-left: 15px;
-    color: rgba(0, 0, 0, 0.80);
+    text-decoration: none;
+    
 }
 .itens .item_1{
     display: flex;
     align-items: center;
     padding-right: 3px;
-    color: rgba(0, 0, 0, 0.45);
 }
 .itens .minha_lista{
     text-decoration: none;
@@ -79,11 +80,12 @@ textarea:focus, input:focus, select:focus {
     font-weight: normal;
     font-size: 17px;
     line-height: 20px;
-    color: rgba(0, 0, 0, 0.60);
-    letter-spacing: 0.02em;
-    
+    letter-spacing: 0.02em; 
 }
+
 .itens .usuario{
+    
+    padding-right: 15px;
     text-decoration: none;
     padding-left: 10px;
     border:none;
@@ -93,12 +95,15 @@ textarea:focus, input:focus, select:focus {
     font-weight: 400;
     font-size: 17px;
     line-height: 20px;
-    color: rgba(0, 0, 0, 0.80);
     letter-spacing: 0.02em;
+    
 }
-.Fi{
-    font-size: 18px;
+
+svg.Fi{
+    color:mediumpurple;
+    font-size: 20px;
 }
+
 .itens .item_1:hover, .minha_lista:hover, .usuario:hover , .item_2:hover{
     color: hsla(209, 100%, 36%);
 }
@@ -110,5 +115,3 @@ textarea:focus, input:focus, select:focus {
     letter-spacing: 0.05em;
     text-decoration: none;
 }
-
-

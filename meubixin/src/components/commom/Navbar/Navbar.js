@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import { FiSearch } from "react-icons/fi";
 import {FiHeart} from "react-icons/fi";
 import {FiUser} from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../App";
 import { useContext } from "react";
 
@@ -13,23 +13,24 @@ export function Navbar(){
     const {setAuth} = useContext(AuthContext);
    
     return <div className="navbar">
-            <div className="logo">
+            <Link to="/home" className="logo">
                 <img src={logo} className="logo1"/>
-            </div>
+            </Link>
             <div className="pesquisar">
             <FiSearch  />
                 <input placeholder="Pesquisar por pets, produtos etc..."></input>
             </div>
             <div className="itens">
+                
                 <div className="item_1">
                     <FiHeart className="Fi"/>
-                    <a href="#" className="minha_lista"> Minha lista</a>
+                    <NavLink  to="/minhalista" className="minha_lista"> Minha lista</NavLink>
                 </div>
 
-                <div className="item_2">
+                <NavLink  to="/meuperfil" className="item_2">
                     <FiUser className="Fi"/>
-                    <a href="#" className="usuario"> {auth.nome_completo}</a>
-                </div>
+                    <div className="usuario"> {auth.nome_completo}</div>
+                </NavLink>
             </div>
             <Link exact to="/" className="sair" onClick={()=> setAuth({token:null,nome_completo:null})} >SAIR</Link>
     </div>

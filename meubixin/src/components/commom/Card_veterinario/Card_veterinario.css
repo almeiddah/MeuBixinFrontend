@@ -1,0 +1,29 @@
+.card_veterinario{
+    cursor: pointer;
+    width: 312px;
+    height: 302px;
+    background: #F7F7F7;
+    border-radius: 10px;
+    transition: 0.5s;
+
+}
+.card_veterinario:hover{
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.08);
+
+}
+.avaliacao{
+    margin-bottom: 5px;
+}
+.texto_veterinario{
+    padding: 15px 15px;
+}
+.nome_completo{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 27px;
+
+color: rgba(0, 0, 0, 0.7);
+}

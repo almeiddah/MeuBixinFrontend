@@ -82,6 +82,8 @@ body{
     margin-bottom: 20px;
 }
 .entrar{
+    cursor: pointer;
+    text-decoration: none;
     margin-top: 25px;
     border:none;
     display: flex;

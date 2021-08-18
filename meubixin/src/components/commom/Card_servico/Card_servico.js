@@ -1,19 +1,19 @@
-import "./Card_modelo_2.css";
-import img from './imagem_cao.png';
+import "./Card_servico.css";
+import img from './servico.png';
 import avaliacao_img from './avaliacao.svg';
 import {FiHeart} from "react-icons/fi";
 
-export function Card_modelo_2({post}){
-    let fornecedor = post.usuario;
-    var numero = post.valor_produto;
+export function Card_servico({post}){
+    let fornecedor = post.usuario.nome_completo;
+    let numero = post.valor_servico;
     return (
         <div className = "card2">
             <div className="conteudo_texto">
             <div className="nome2">
-                        {post.nome_produto}
+                        {post.nome_servico}
             </div>       
             <div className="ofertante2">
-                            {fornecedor.nome_completo}
+                            {fornecedor}
             </div>
             <img src={avaliacao_img} className="avaliacao2"/>
 
@@ -27,8 +27,7 @@ export function Card_modelo_2({post}){
                 </div>        
             </div>
             <div className="area_produto2">
-                <img src={img} className="img_produto_2"/>
-                <FiHeart className="add_lista2"/>
+                <img src={img} className="img_produto2"/>
             </div>
 
         </div>
