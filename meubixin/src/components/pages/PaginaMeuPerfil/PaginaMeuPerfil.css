@@ -1,0 +1,138 @@
+.parte_superior_1{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0px;
+}
+.parte_superior_1 {
+    margin-top: 80px;
+}
+.parte_superior_1 .titulo h1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.conteudo_perfil{
+    display: flex;
+}
+.conteudo_foto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo_perfil .conteudo_foto{
+    margin-top: 10px;
+}
+
+.conteudo_perfil .conteudo_foto h2{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 20px;
+    color: #005EB8;
+    letter-spacing: .02em;
+}
+
+.conteudo_perfil .conteudo_texto{
+    margin-left: 30px;
+    display: flex;
+    height: 210px;
+    flex-direction: column;
+
+}
+
+.conteudo_perfil .conteudo_texto .dados_pessoais h1{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 28px;
+/* identical to box height */
+
+
+color: rgba(0, 0, 0, 0.8);
+}
+
+.conteudo_perfil .conteudo_texto .dados_pessoais h2{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 5px;
+letter-spacing: .02em;
+color: rgba(0, 0, 0, 0.8);
+margin-bottom: 30px;
+
+}
+
+.conteudo_perfil .conteudo_texto .dados_pessoais h3{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color: #8B8B8B;
+}
+
+.endereco{
+    display: flex;
+    width: 70%;
+}
+
+.endereco .item{
+    margin-right: 30px;
+    height: 70px;
+    background: #FFFFFF;
+border: 1px solid rgba(0, 0, 0, 0.18);
+box-sizing: border-box;
+border-radius: 5px;
+padding-left: 20px;
+padding-right: 60px;
+
+}
+
+.endereco .item h2{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0px;
+}
+
+.endereco .item h1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;    
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.contato{
+    display: flex;
+    align-items: center;
+}
+
+.contato h3{
+    margin-left: 15px;
+    font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 14px;
+/* identical to box height */
+
+
+/* verde */
+
+color: #009739;
+}

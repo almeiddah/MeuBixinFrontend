@@ -37,7 +37,7 @@ textarea:focus, input:focus, select:focus {
     font-size: 19px;
     line-height: 24px;
     color: rgba(0, 0, 0, 0.45);
-    width: 35%;
+    width: 30%;
   
 }
 .navbar .pesquisar input{
@@ -49,50 +49,63 @@ textarea:focus, input:focus, select:focus {
     border: none;
 }
 .itens{
-    
-    margin-left: 3%;
+    margin-left: 2%;
     display: flex;
-    width: 23%;
+    width: 34%;
     justify-content: space-evenly;
-    margin-right: 2%;
     height: 100%;
     
+    
+}
+.item_2{
+    padding-left: 5px;
 }
 .itens .item_2{
     display: flex;
     align-items: center;
-    padding-left: 15px;
     text-decoration: none;
     
+}
+.item_1{
+    text-decoration: none;
+    
+}
+
+.item_1 .home{
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 17px;
+    padding: 0px 5px;
+    font-style: normal;
+    letter-spacing: 0.02em; 
 }
 .itens .item_1{
     display: flex;
     align-items: center;
     padding-right: 3px;
 }
-.itens .minha_lista{
+.minha_lista{
     text-decoration: none;
     padding-left: 8px;
-    border:none;
     background-color: white;
+    color: rgba(0, 0, 0, 0.70);
     font-family: Poppins;
     font-style: normal;
-    font-weight: normal;
     font-size: 17px;
     line-height: 20px;
     letter-spacing: 0.02em; 
 }
 
 .itens .usuario{
-    
-    padding-right: 15px;
+    color: rgba(0, 0, 0, 0.70);
+    background-color:rgba(0, 0, 0, 0.70);
+    padding-left: 10000px;
+    padding-right: 5px;
     text-decoration: none;
     padding-left: 10px;
     border:none;
     background-color: white;
     font-family: Poppins;
     font-style: normal;
-    font-weight: 400;
     font-size: 17px;
     line-height: 20px;
     letter-spacing: 0.02em;
@@ -100,7 +113,7 @@ textarea:focus, input:focus, select:focus {
 }
 
 svg.Fi{
-    color:mediumpurple;
+    color: rgba(0, 0, 0, 0.70);
     font-size: 20px;
 }
 
@@ -111,7 +124,7 @@ svg.Fi{
     margin-left: auto;
     margin-right: 100px;
     font-weight: 500;
-    color: hsla(209, 100%, 36%);
+    color: rgba(0, 0, 0, 0.45);
     letter-spacing: 0.05em;
     text-decoration: none;
 }

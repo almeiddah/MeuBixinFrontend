@@ -20,8 +20,12 @@ export function Navbar(){
             <FiSearch  />
                 <input placeholder="Pesquisar por pets, produtos etc..."></input>
             </div>
+            
             <div className="itens">
-                
+            <NavLink to="/home"  className="item_1">
+                    <div  className="home ">Tela inicial</div>
+                </NavLink>
+
                 <div className="item_1">
                     <FiHeart className="Fi"/>
                     <NavLink  to="/minhalista" className="minha_lista"> Minha lista</NavLink>
