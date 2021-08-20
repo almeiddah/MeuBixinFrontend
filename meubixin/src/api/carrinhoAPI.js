@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export function desfavoritarProdutoPorUser(token){ //Creio que aqui não precisa verificar token ja que vou poder entrar sem conta
+export function desfavoritarProdutoPorUser(token){
     return axios({
         method: "DELETE",
         url: "http://localhost:8393/carrinho/:id",
@@ -13,12 +13,12 @@ export function desfavoritarProdutoPorUser(token){ //Creio que aqui não precisa
     })
 }
 
-export function listarProdutosFavoritadosPorUser(){ 
+export function listarProdutosFavoritadosPorUser(id, token){ 
     return axios({
         method: "GET",
-        url: "http://localhost:8393/carrinho/:id",
-        params: {
-            id: this.selectedRoute
+        url: `http://localhost:8393/carrinho/${id}`,
+        headers:{
+            "token": token,
         }
     })
 }

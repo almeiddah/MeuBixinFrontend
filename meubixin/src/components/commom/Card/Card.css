@@ -1,6 +1,13 @@
 body{
     background-color: #FCFCFC;
 }
+.none{
+    display: none;
+}
+.botao_favoritar{
+    border: none;
+    background-color: transparent;
+}
 .card{
     cursor: pointer;
     padding: 25px 33px 20px 33px;
