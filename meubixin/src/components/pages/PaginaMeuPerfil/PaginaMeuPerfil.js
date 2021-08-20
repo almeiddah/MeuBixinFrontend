@@ -5,11 +5,32 @@ import { Navbar } from "../../commom/Navbar/Navbar";
 import "./PaginaMeuPerfil.css";
 import foto_perfil from './foto_perfil.png';
 
+import {listarPetsPorUser } from "../../../api/petAPI";
+import { Card_pet } from "../../commom/Card_pet/Card_pet";
+import { Link } from "react-router-dom";
+
+import {FiPlus} from "react-icons/fi";
+
+
+
+function Pets2({pets}){
+    let posts = pets.map((post)=>(<Card_pet post={post}> </Card_pet>))
+
+    return ( 
+            <div className="petsmeuperfil">
+               {posts}
+            </div>
+            )
+}
+
 
 
 function Dados_usuario({user}){
 
     console.log(user);
+
+    let numero = user.Telefone;
+    let link_magnetico = `https://api.whatsapp.com/send?1=pt_BR&phone= + ${numero}`;
     return <div className="parte_superior_1">
     <div className="titulo"> 
         <h1>Meu perfil</h1>
@@ -38,7 +59,7 @@ function Dados_usuario({user}){
                             <h2>Telefone</h2>
                             <div className="contato">
                             <h1>{user.Telefone}</h1>
-                            <h3>Entrar em contato</h3>
+                            <h3><a href={link_magnetico}>Entrar em contato</a></h3>
                             </div>
                     </div> 
                 </div>
@@ -65,7 +86,6 @@ export function PaginaMeuPerfil(){
         
         listarUsuarioPorId(auth._id, auth.token).then(
             (response) =>{
-                console.log("entrou no listar usuario");
                 setUsuario(response.data);
                 
             }).catch(
@@ -74,9 +94,35 @@ export function PaginaMeuPerfil(){
             })
         )
     },[]);
+
+
+    const [pets, setPets] = useState([]);
+    useEffect(()=>{
+        console.log("ID:", auth._id);
+        listarPetsPorUser(auth.token, auth._id).then(
+            (response) =>{
+                
+                setPets(response.data);
+            }).catch(
+            (error=>{
+                console.log(error);
+            })
+        )
+    },[]);
+
     return <div className="meu_perfil">
         <Navbar></Navbar>
         <br/>
         <GetDados usuario={usuario}> </GetDados>
+        <div className="produtos_recentes">
+                <div className="titulo"> 
+                    <h1>Meus Pets</h1>
+                    <Link to="/meuperfil/adicionarPet" className="botao_add_pet"><FiPlus/>Adicionar Pet</Link>
+                </div>
+                <div className="petsmeuperfil">
+                <Pets2 pets={pets}></Pets2>
+                </div>
+               
+            </div>
     </div>
 }

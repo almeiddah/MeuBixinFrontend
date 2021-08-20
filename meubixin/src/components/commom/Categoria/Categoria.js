@@ -11,7 +11,7 @@ export function Categoria(){
         <h1>Nossas Categorias</h1>
         <div className="categorias">
 
-            <NavLink  exact to="/home" className="item"><FiPackage></FiPackage>Produtos</NavLink>
+            <NavLink exact to="/home" className="item"><FiPackage></FiPackage>Produtos</NavLink>
             <NavLink exact to="/home/servicos" className="item"><FiUsers></FiUsers>Serviços</NavLink>
             <NavLink exact to="/home/pets" className="item"><IoPawOutline></IoPawOutline>Adoção</NavLink>
         </div>

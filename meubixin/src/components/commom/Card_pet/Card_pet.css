@@ -1,0 +1,104 @@
+.card2{
+    cursor: pointer;
+    padding: 33px;
+    width:  575px;
+    height: 246px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+}
+.card2:hover{
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.08);
+
+}
+.conteudo_texto{
+    width: 100%;
+}
+
+.add_lista2{
+    font-size: 28px;
+    opacity: 0.45;
+}
+.add_lista2:hover{
+    color: #005EB8;
+    opacity: 1;
+    transition: 0.5s;
+
+}
+
+.dados{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 36px;
+color: rgba(0, 0, 0, 0.6);
+margin-bottom: 25px;
+
+}
+
+.nome2{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 5px;
+}
+.endereco_pet{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.endereco_pet h1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 10px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.endereco_pet h2{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 5px;
+/* identical to box height */
+
+
+color: rgba(0, 0, 0, 0.8);
+
+
+}
+
+.area_produto2{
+    display: flex;
+}
+.img_produto_2{
+    width: 255px;
+    margin-right: 5px;
+}
+
+.botao_pet{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 33px;
+    text-decoration: none;
+    padding: 7px 20px 4px 20px;
+    width: 130px;
+    height: 30px;
+    color: white;
+    background: #FFA400;
+
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}

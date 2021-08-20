@@ -1,4 +1,5 @@
 /* Conteudo produtos recentes*/
+
 .produtos_recentes, .produtos_diversao{
     margin-left: 100px;
     margin-right: 100px;
@@ -22,7 +23,10 @@
 
 }
 
-
+.pets{
+    display: flex;
+    flex-wrap: wrap;
+}
 .produtos_recentes .titulo h2{
     
 font-family: Poppins;

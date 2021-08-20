@@ -1,3 +1,11 @@
+.pets{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 100px;
+}
+
 .filtro{
     display: flex;
     width: 90%;
@@ -19,7 +27,8 @@
     
 }
 
-.active{
-    color: #005EB8;
-    font-weight: 600;
+.filtro .active{
+    color: white;
+    font-weight: 500;
+    background-color: hsla(209, 100%, 36%);
 }

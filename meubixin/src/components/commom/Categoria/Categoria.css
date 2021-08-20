@@ -6,13 +6,14 @@
     flex-direction: column;
     align-items: center;
 }
-.active{
-    color: none;
+
+.categorias .active{
     font-weight: 500;
     border-bottom: 2px solid #005EB8;
     color: #005EB8;
     
 }
+
 .categoria h1{
     font-family: Poppins;
     font-style: normal;

@@ -30,9 +30,9 @@ function FormCadastro(){
                 <input type="password" name="senha" placeholder="Digite uma senha" {...register("senha")}></input><br></br>
             {/* Tipo pessoa:  */}
                 <select name="tipo_pessoa"  id="" {...register("tipo_pessoa")}>
-                        <option value="fisica">Cadastrar como?</option>
-                        <option value="fisica">Pesspa Física</option>
-                        <option value="juridica">Pessoa Juridica</option>
+                        <option>Cadastrar como?</option>
+                        <option value="Pessoa Física">Pessoa Física</option>
+                        <option value="Pessoa Jurídica">Pessoa Juridica</option>
                 </select>
             {/* Descricao:  */}
                 <input type="text" placeholder="Digite uma descrição para você " name="descricao_pessoa" {...register("descricao_pessoa")}></input><br></br>

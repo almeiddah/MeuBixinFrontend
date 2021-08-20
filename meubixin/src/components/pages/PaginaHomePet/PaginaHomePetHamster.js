@@ -9,7 +9,7 @@ import { Navbar } from "../../commom/Navbar/Navbar";
 import "./PaginaHomePet.css";
 
 
-function Pets({pets}){
+export function Pets({pets}){
     let posts = pets.map((post)=>(<Card_pet post={post}> </Card_pet>))
 
     return ( 
@@ -19,10 +19,10 @@ function Pets({pets}){
             )
 }
 
-export function PaginaHomePet(){
+export function PaginaHomePetHamster(){
 
     const {auth} = useContext(AuthContext);
-    let especie = "Todos";
+    let especie = "Hamster";
     const [pets, setPets] = useState([]);
     useEffect(()=>{
         listarPets(auth.token, especie).then(

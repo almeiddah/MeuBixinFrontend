@@ -3,9 +3,42 @@
     margin-right: 100px;
     margin-top: 0px;
 }
+.petsmeuperfil{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
 .parte_superior_1 {
     margin-top: 80px;
 }
+.botao_add_pet{
+    font-weight: 500;
+    cursor: pointer;
+        display: flex;
+        justify-content:space-between;
+
+        align-items: center;
+        line-height: 24px;
+        text-decoration: none;
+        padding: 7px 20px 7px 20px;
+        width: 130px;
+        height: 30px;
+        color: white;
+        background: #FFA400;
+        letter-spacing: 0.01em;
+        font-size: 16px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        transition: 0.5s;
+}
+.botao_add_pet:hover{
+    background-color: white;
+    color: #FFA400;
+    border: 1px solid #FFA400 ;
+}
+
 .parte_superior_1 .titulo h1{
     font-family: Poppins;
     font-style: normal;
@@ -50,20 +83,18 @@
 
 .conteudo_perfil .conteudo_texto .dados_pessoais h1{
     font-family: Poppins;
-font-style: normal;
-font-weight: 500;
-font-size: 28px;
-line-height: 28px;
-/* identical to box height */
-
-
-color: rgba(0, 0, 0, 0.8);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .conteudo_perfil .conteudo_texto .dados_pessoais h2{
     font-family: Poppins;
 font-style: normal;
 font-weight: 300;
+
 font-size: 20px;
 line-height: 5px;
 letter-spacing: .02em;
@@ -79,22 +110,22 @@ font-weight: normal;
 font-size: 18px;
 line-height: 24px;
 color: #8B8B8B;
+
 }
 
 .endereco{
     display: flex;
-    width: 70%;
 }
 
 .endereco .item{
-    margin-right: 30px;
+    margin-right: 20px;
     height: 70px;
     background: #FFFFFF;
-border: 1px solid rgba(0, 0, 0, 0.18);
-box-sizing: border-box;
-border-radius: 5px;
-padding-left: 20px;
-padding-right: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 60px;
 
 }
 
@@ -117,6 +148,11 @@ padding-right: 60px;
     color: rgba(0, 0, 0, 0.6);
 }
 
+.endereco .item h3 a{
+    text-decoration: none;
+    color: #009739;
+}
+
 .contato{
     display: flex;
     align-items: center;
@@ -129,10 +165,5 @@ font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 14px;
-/* identical to box height */
-
-
-/* verde */
-
 color: #009739;
 }
