@@ -19,3 +19,27 @@ export function listarPetsPorUser(token,id){
         }
     })
 }
+
+export function inserirPet(pet_info, token){
+    console.log("entrou no axios", pet_info, token);
+    return axios({
+        method: "POST",
+        url: "http://localhost:8393/pets",
+        headers:{
+            "token": token,
+        },
+        data: pet_info,
+    })
+}
+
+export function removerPet(id, token){
+    console.log("entrou no axios", id, token);
+    return axios({
+        method: "DELETE",
+        url: `http://localhost:8393/pets/${id}/excluir`,
+        headers:{
+            "token": token,
+        }
+    })
+}
+

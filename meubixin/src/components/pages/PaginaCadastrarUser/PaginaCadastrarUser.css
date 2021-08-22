@@ -36,7 +36,6 @@ body{
 .direito2{
     padding: 5vh 20px 10px 80px;
     width: 45%;
-    background-color:#fff ;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

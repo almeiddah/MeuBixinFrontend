@@ -15,3 +15,14 @@ export function listarVeterinario(){
 
     })
 }
+
+export function inserirServico(servico_info,token){ 
+    return axios({
+        method: "POST",
+        url: "http://localhost:8393/servicos",
+        headers:{
+            "token": token,
+        },
+        data: servico_info,
+    })
+}
