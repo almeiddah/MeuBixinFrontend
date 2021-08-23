@@ -17,11 +17,11 @@ export function listarProdutos(token){
     })
 }
 
-export function listarProdutosPorLoja(id_loja){ 
+export function detalharProduto(id_produto){ 
     return axios({
         method: "GET",
-        url: "http://localhost:8393/produtos/:id",
-        data: id_loja,
+        url: `http://localhost:8393/produto/${id_produto}`,
+        
     })
 }
 

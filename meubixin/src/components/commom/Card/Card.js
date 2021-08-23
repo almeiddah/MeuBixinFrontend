@@ -8,6 +8,8 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../App";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
+import { detalharProduto } from "../../../api/produtosAPI";
+import  history  from "../../../history";
 
 
 
@@ -37,6 +39,14 @@ function Favoritar({produto_info}){
 
 
 export function Card({post, decisor}){
+    function redirecionar(post){
+        history.push("/home/produto");
+        console.log("entrou no onclick");
+        return (
+            <detalharProduto id_produto={post}></detalharProduto>
+        )    
+    }
+
     let imagem_usada;
     if(decisor == 1){
         imagem_usada = img;
@@ -49,8 +59,9 @@ export function Card({post, decisor}){
     let fornecedor = post.usuario;
 
     var numero = post.valor_produto;
+
     return (
-        <div className = "card">
+        <div className = "card" onClick={redirecionar(post)}>
              
                 <div className="area_produto">
                     <img src={imagem_usada} className="img_produto"/>

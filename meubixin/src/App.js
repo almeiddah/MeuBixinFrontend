@@ -14,6 +14,7 @@ import { PaginaHomePetCachorro } from './components/pages/PaginaHomePet/PaginaHo
 import { PaginaHomePetGato } from './components/pages/PaginaHomePet/PaginaHomePetGato';
 import { PaginaHomePetCoelho } from './components/pages/PaginaHomePet/PaginaHomePetCoelho';
 import { PaginaHomePetHamster } from './components/pages/PaginaHomePet/PaginaHomePetHamster';
+import { PaginaDetalheproduto } from './components/pages/PaginaDetalheProduto/PaginaDetalheProduto';
 
 export const AuthContext = createContext(null);
 
@@ -43,6 +44,8 @@ function App() {
           <Route exact path="/home/pets/gato" component={PaginaHomePetGato}></Route>
           <Route exact path="/home/pets/coelho" component={PaginaHomePetCoelho}></Route>
           <Route exact path="/home/pets/hamster" component={PaginaHomePetHamster}></Route>
+          <Route exact path="/home/produto" component={PaginaDetalheproduto}></Route>
+
         </BrowserRouter>
       </AuthContext.Provider>
    </div>
