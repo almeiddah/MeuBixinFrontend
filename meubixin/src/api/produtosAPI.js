@@ -37,6 +37,7 @@ export function listarProdutosPorTipo(categoria,token){
 }
 
 export function inserirProduto(produto_info, token){
+    console.log("entrou no axios", produto_info, token);
     return axios({
         method: "POST",
         url: "http://localhost:8393/produtos",
@@ -46,3 +47,15 @@ export function inserirProduto(produto_info, token){
         data: produto_info,
     })
 }
+
+export function removerProduto(produto_info, token){
+    console.log("entrou no axios", produto_info, token);
+    return axios({
+        method: "DELETE",
+        url: `http://localhost:8393/produtos/${produto_info.id}`,
+        headers:{
+            "token": token,
+        }
+    })
+}
+

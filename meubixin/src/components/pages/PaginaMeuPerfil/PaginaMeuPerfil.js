@@ -1,20 +1,24 @@
 import { AuthContext } from "../../../App";
 import { useContext, useState, useEffect } from "react";
-import { listarUsuarioPorId } from "../../../api/usuarioAPI";
+import { listarUsuarioPorId, obterProdutos, obterServicos } from "../../../api/usuarioAPI";
 import { Navbar } from "../../commom/Navbar/Navbar";
 import "./PaginaMeuPerfil.css";
 import foto_perfil from './foto_perfil.png';
 
 import {listarPetsPorUser } from "../../../api/petAPI";
-import { Card_pet } from "../../commom/Card_pet/Card_pet";
 import { Link } from "react-router-dom";
 
 import {FiPlus} from "react-icons/fi";
+import { Card_servico } from "../../commom/Card_servico/Card_servico";
+import { Card_pet_meu_perfil } from "../../commom/Card_pet/Card_pet_meu_perfil";
+import { Card_meu_perfil } from "../../commom/Card _meu_perfil/Card_meu_perfil";
+
+
 
 
 
 function Pets2({pets}){
-    let posts = pets.map((post)=>(<Card_pet post={post}> </Card_pet>))
+    let posts = pets.map((post)=>(<Card_pet_meu_perfil post={post}> </Card_pet_meu_perfil>))
 
     return ( 
             <div className="petsmeuperfil">
@@ -23,7 +27,25 @@ function Pets2({pets}){
             )
 }
 
+function Produtos2({produtos,decisor}){
+    let posts = produtos.map((post)=>(<Card_meu_perfil post={post} decisor={decisor}> </Card_meu_perfil>))
 
+    return ( 
+            <div className="petsmeuperfil">
+               {posts}
+            </div>
+            )
+}
+
+function Servicos2({servicos}){
+    let posts = servicos.map((post)=>(<Card_servico post={post}> </Card_servico>))
+
+    return ( 
+            <div className="petsmeuperfil">
+               {posts}
+            </div>
+            )
+}
 
 function Dados_usuario({user}){
 
@@ -81,6 +103,7 @@ export function GetDados({usuario}){
 export function PaginaMeuPerfil(){
     const {auth} = useContext(AuthContext);
 
+    //Pegar dados do usuario  
     const [usuario, setUsuario] = useState([]);
     useEffect(()=>{
         
@@ -95,7 +118,7 @@ export function PaginaMeuPerfil(){
         )
     },[]);
 
-
+    //Pegar pets do usuario logado
     const [pets, setPets] = useState([]);
     useEffect(()=>{
         console.log("ID:", auth._id);
@@ -110,10 +133,39 @@ export function PaginaMeuPerfil(){
         )
     },[]);
 
+    //Pegar produtos do usuario logado
+    const [produtos, setProduts] = useState([]);
+    useEffect(()=>{
+        console.log("ID:", auth._id);
+        obterProdutos(auth.token, auth._id).then(
+            (response) =>{
+                setProduts(response.data);
+            }).catch(
+            (error=>{
+                console.log(error);
+            })
+        )
+    },[]);
+
+    //Pegar serviços do usuario logado
+    const [servicos, setServicos] = useState([]);
+    useEffect(()=>{
+        console.log("ID:", auth._id);
+        obterServicos(auth.token, auth._id).then(
+            (response) =>{
+                setServicos(response.data);
+            }).catch(
+            (error=>{
+                console.log(error);
+            })
+        )
+    },[]);
+
     return <div className="meu_perfil">
         <Navbar></Navbar>
         <br/>
         <GetDados usuario={usuario}> </GetDados>
+        {/* pets */}
         <div className="produtos_recentes">
                 <div className="titulo"> 
                     <h1>Meus Pets</h1>
@@ -124,5 +176,28 @@ export function PaginaMeuPerfil(){
                 </div>
                
             </div>
+        {/* produtos */}
+            <div className="produtos_recentes">
+                <div className="titulo"> 
+                    <h1>Meus produtos</h1>
+                    <Link to="/meuperfil/adicionarProduto" className="botao_add_pet produto"><FiPlus/>Adicionar Produtos</Link>
+                </div>
+                <div className="petsmeuperfil">
+                <Produtos2 produtos={produtos} decisor="1"></Produtos2>
+                </div>
+               
+            </div>
+        {/* Serviços */}
+            <div className="produtos_recentes">
+                <div className="titulo"> 
+                    <h1>Meus serviços</h1>
+                    <Link to="/meuperfil/adicionarServico" className="botao_add_pet produto"><FiPlus/>Adicionar Serviços</Link>
+                </div>
+                <div className="petsmeuperfil">
+                <Servicos2 servicos={servicos}></Servicos2>
+                </div>
+               
+            </div>
+    
     </div>
 }

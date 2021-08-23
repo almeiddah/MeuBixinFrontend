@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { listarProdutos, listarProdutosPorTipo } from "../../../api/produtosAPI";
 import { AuthContext } from "../../../App";
+import history from "../../../history";
 import { Banner } from "../../commom/Banner/Banner";
 import { Card } from "../../commom/Card/Card";
 import { Card_modelo_2 } from "../../commom/Card_modelo_2/Card_modelo_2";
@@ -11,7 +12,7 @@ import "./PaginaHome.css";
 
 
 export function Conteudo({produtos, decisor}){
-    let posts = produtos.map((post)=>(<Card post={post} decisor={decisor}></Card>))
+    let posts = produtos.map((post)=>(<Card post={post} onClick={history.push('/home/produto')}decisor={decisor}></Card>))
 
     return ( 
             <div className="conteudo_produtos_recentes">

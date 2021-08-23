@@ -33,10 +33,14 @@
         border-radius: 5px;
         transition: 0.5s;
 }
+
+.produto{
+    width: 180px;
+}
 .botao_add_pet:hover{
     background-color: white;
     color: #FFA400;
-    border: 1px solid #FFA400 ;
+    border: 1.8px solid #FFA400 ;
 }
 
 .parte_superior_1 .titulo h1{
