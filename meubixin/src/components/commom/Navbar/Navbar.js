@@ -13,7 +13,6 @@ export function Navbar(){
     const {setAuth} = useContext(AuthContext);
    
     let nome_perfil = auth.nome_completo.split(' ');
-    console.log(nome_perfil);
 
 
     return <div className="navbar">
@@ -30,16 +29,16 @@ export function Navbar(){
                     <div  className="home ">Tela inicial</div>
                 </NavLink>
 
-                <div className="item_1">
+                <NavLink  to="/minhalista" className="item_2">
                     <FiHeart className="Fi"/>
-                    <NavLink  to="/minhalista" className="minha_lista"> Minha lista</NavLink>
-                </div>
+                    <div className="usuario"> Minha Lista</div>
+                </NavLink>
 
                 <NavLink  to="/meuperfil" className="item_2">
                     <FiUser className="Fi"/>
                     <div className="usuario"> {nome_perfil[0]} {nome_perfil[1]}</div>
                 </NavLink>
             </div>
-            <Link exact to="/" className="sair" onClick={()=> setAuth({token:null,nome_completo:null})} >SAIR</Link>
+            
     </div>
 }

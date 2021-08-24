@@ -12,7 +12,7 @@ import "./PaginaHome.css";
 
 
 export function Conteudo({produtos, decisor}){
-    let posts = produtos.map((post)=>(<Card post={post} onClick={history.push('/home/produto')}decisor={decisor}></Card>))
+    let posts = produtos.map((post)=>(<Card post={post} decisor={decisor}></Card>))
 
     return ( 
             <div className="conteudo_produtos_recentes">

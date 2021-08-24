@@ -18,9 +18,10 @@ export function listarProdutos(token){
 }
 
 export function detalharProduto(id_produto){ 
+    let new_id = id_produto.match.params.id;
     return axios({
         method: "GET",
-        url: `http://localhost:8393/produto/${id_produto}`,
+        url: `http://localhost:8393/produto/${new_id}`,
         
     })
 }

@@ -8,6 +8,24 @@
     align-items: center;
     z-index: 1;
 }
+.usuario {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 .navbar .logo{
     margin-left: 100px;
 
@@ -49,12 +67,13 @@ textarea:focus, input:focus, select:focus {
     padding-left: 10px;
     font-size: 17px;
     width: 500px;
+    border-radius: 10px;
     background: #F7F7F7;
     height: 41px;
     border: none;
 }
 .itens{
-    margin-left: 2%;
+    margin-left: 9%;
     display: flex;
     width: 34%;
     justify-content: space-evenly;

@@ -1,0 +1,228 @@
+.detalhes_pagina_produto{
+    margin-left: 100px;
+}
+
+.navegador_migalha_card{
+    margin-top: 80px;
+    width: 515px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navegador_migalha_card .Link{
+    text-decoration: none;
+    color: #005EB8;
+    font-weight: 500;
+}
+
+.parte_imagens_produto .imagem_grande .img_produto_grande{
+    height: 320px;
+}
+.partes_prod{
+    margin-top: 50px;
+    display: flex;
+}
+.imagens{
+    display: flex;
+    height: 412px;
+    width: 42vw;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.imagem_grande{
+    width: 65%;
+    height: 420px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem_pequenas{
+    height: 422px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+
+.imagem_pequenas .img_produto_pequena{
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+}
+.imagem_pequenas .img_produto_pequena{
+    width: 130px;
+    padding: 10px 30px;
+}
+
+
+.parte_dados_produtos{
+    margin-left: 3%;
+    width: 50vw;
+    margin-right: 100px;
+    height: 54vh;
+    position: relative;
+}
+
+.nome_e_fornecedor h1{
+    margin: 0%0;
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 40px;
+/* identical to box height */
+
+letter-spacing: 0.02em;
+
+color: rgba(0, 0, 0, 0.8);
+width: 100%;
+}
+
+.nome_e_fornecedor h2{
+    margin: 0%;
+    margin-top: 10px;
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.45);
+}
+
+.preco_produto{
+    display: flex;
+    justify-content: start;
+    margin-top: 25px;
+}
+
+.preco_produto .rs{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height */
+
+text-align: center;
+
+color: rgba(0, 0, 0, 0.6);
+}
+
+.preco_produto .valor{
+    margin-left: 15px;
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 50px;
+line-height: 50px;
+letter-spacing: 0.03em;
+text-align: center;
+
+color: rgba(0, 0, 0, 0.8);
+}
+.classificacao_produto{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    margin-bottom: 15px;
+}
+.classificacao_produto h3{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: rgba(0, 0, 0, 0.8);
+}
+
+.classificacao_produto h4{
+    color: rgba(0, 0, 0, 0.45);
+}
+.descricao{
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 18px;
+}
+
+.botoes{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.botoes .avaliar{
+    cursor: pointer;
+    border: none;
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 9px 15px;
+
+width: 140px;
+height: 39px;
+
+background: #F7F7F7;
+border-radius: 5px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+transition: 0.5s;
+
+
+
+color: rgba(0, 0, 0, 0.6);
+margin-right: 20px;
+}
+
+.avaliar:hover{
+    background: #dadada;
+}
+
+.botoes .contato{
+    cursor: pointer;
+    border: none;
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 9px 34px;
+
+width: 196px;
+height: 39px;
+
+background: #FFA400;
+border-radius: 5px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+transition: 0.5s;
+}
+.botoes .contato:hover{
+    background: #eb8500;
+}

@@ -17,6 +17,7 @@ import { PaginaHomePetHamster } from './components/pages/PaginaHomePet/PaginaHom
 import { PaginaDetalheproduto } from './components/pages/PaginaDetalheProduto/PaginaDetalheProduto';
 import { PaginaInserirOferta_Servico } from './components/pages/PaginaInserirOferta/PaginaInserirOferta_Servico';
 import { PaginaInserirOferta_Pet } from './components/pages/PaginaInserirOferta/PaginaInserirOferta_Pet';
+import { PaginaMinhaLista } from './components/pages/PaginaMinhaLista/PaginaMinhaLista';
 
 export const AuthContext = createContext(null);
 
@@ -38,7 +39,12 @@ function App() {
           <Route exact path="/home">
             {auth.token==null?<Redirect to="/"></Redirect>:<PaginaHome></PaginaHome>}
           </Route>
+
           <Route exact path="/meuperfil" component={PaginaMeuPerfil}></Route>
+          <Route exact path="/meu_perfil" component={PaginaMeuPerfil}></Route>
+
+          <Route exact path="/minhalista" component={PaginaMinhaLista}></Route>
+
           <Route exact path="/PaginaHomeextend" component={PaginaInserirOferta}></Route>
           <Route exact path="/home/servicos" component={PaginaHomeServicos}></Route>
           <Route exact path="/home/pets" component={PaginaHomePet}></Route>
@@ -50,6 +56,9 @@ function App() {
           <Route exact path="/meuperfil/adicionarProduto" component={PaginaInserirOferta}></Route>
           <Route exact path="/meuperfil/adicionarServico" component={PaginaInserirOferta_Servico}></Route>
           <Route exact path="/meuperfil/adicionarPet" component={PaginaInserirOferta_Pet}></Route>
+          <Route exact path="/home/produtos/:id" component={PaginaDetalheproduto}></Route>
+        
+        
         </BrowserRouter>
       </AuthContext.Provider>
    </div>

@@ -3,6 +3,18 @@
     margin-right: 100px;
     margin-top: 0px;
 }
+.acesso{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.acesso .sair{
+    text-decoration: none;
+    color: #3b3b3bc9;
+    font-weight: 500;
+}
 .petsmeuperfil{
     display: flex;
     flex-direction: row;

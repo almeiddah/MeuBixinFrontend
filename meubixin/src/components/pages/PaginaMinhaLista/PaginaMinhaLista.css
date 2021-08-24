@@ -1,0 +1,34 @@
+.minha_lista{
+    margin-left: 100px;
+    margin-top: 80px;
+}
+
+h2{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.8); 
+}
+h3{
+    margin: 0;
+    font-family: Poppins;
+font-style: normal;
+font-weight: 300;
+
+font-size: 20px;
+line-height: 30px;
+letter-spacing: .02em;
+color: rgba(0, 0, 0, 0.8);
+margin-bottom: 30px;
+}
+
+.conteudo_favoritado{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 45.5%;
+}

@@ -17,7 +17,7 @@ function Botao({id_pet_remover}){
         console.log(id_pet.id_pet);
        removerPet(id_pet.id_pet, auth.token).then((response)=>{
             console.log(response);
-            history.push("/home");
+            history.push("/meu_perfil");
 
         }).catch((error)=>{
             console.log(error);

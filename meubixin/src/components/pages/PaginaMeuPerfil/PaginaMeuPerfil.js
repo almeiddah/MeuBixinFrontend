@@ -49,6 +49,9 @@ function Servicos2({servicos}){
 
 function Dados_usuario({user}){
 
+    const {auth} = useContext(AuthContext); //pegar token e nome
+    const {setAuth} = useContext(AuthContext);
+
     console.log(user);
 
     let numero = user.Telefone;
@@ -60,7 +63,12 @@ function Dados_usuario({user}){
     <div className="conteudo_perfil">
         <div className="conteudo_foto">
             <img src={foto_perfil} className="foto"/>
+            <div className="acesso">
             <h2>Editar perfil</h2>
+            <Link exact to="/" className="sair" onClick={()=> setAuth({token:null,nome_completo:null})} >SAIR</Link>
+            </div>
+          
+            
         </div>
         <div className="conteudo_texto">
                 <div className="dados_pessoais">

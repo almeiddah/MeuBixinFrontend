@@ -62,6 +62,26 @@ body{
     align-items: center;
     padding-top: 5px;
 }
+.card_favoritado{
+    margin-bottom: 10px;
+    width: auto;
+    cursor: pointer;
+    padding: 15px 30px 20px 30px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    transition: 0.5s;
+    position: relative;
+}
+.card_favoritado:hover{
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.08);
+
+}
+.favoritado_n{
+    font: 28px;
+    line-height: 20px;
+}
+
 
 .dados_produto .nome{
     color: hsla(0, 0%, 0%, 0,8);

@@ -21,7 +21,7 @@ function Excluir({produto_info}){
         console.log(produto_info);
         removerProduto( produto_info,token_id).then((response)=>{
             console.log("produto removido", response.data);
-            history.push("/home");
+            history.push("/meu_perfil");
             
             
         }).catch((error)=>{

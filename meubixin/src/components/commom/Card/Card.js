@@ -3,13 +3,12 @@ import img from './imagem_racao.png';
 import img2 from './imagem_coleira.png';
 import avaliacao_img from './avaliacao.svg';
 import {FiHeart} from "react-icons/fi";
-import { inserirProdutoCarrinho, listarProdutosFavoritadosPorUser } from "../../../api/carrinhoAPI";
-import { useContext, useEffect, useState } from "react";
+import { inserirProdutoCarrinho } from "../../../api/carrinhoAPI";
+import { useContext} from "react";
 import { AuthContext } from "../../../App";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
-import { detalharProduto } from "../../../api/produtosAPI";
-import  history  from "../../../history";
+
 
 
 
@@ -22,7 +21,7 @@ function Favoritar({produto_info}){
     const submeter = (produto_info) =>{
     
         inserirProdutoCarrinho(token_id, produto_info).then((response)=>{
-            history.push("/meuperfil");
+            history.push("/home");
             console.log("produto favoritado", response.data);
             
         }).catch((error)=>{
@@ -39,11 +38,13 @@ function Favoritar({produto_info}){
 
 
 export function Card({post, decisor}){
-    function redirecionar(post){
-        history.push("/home/produto/"+post._id);
-        console.log("entrou no onclick");
-      
+    let history = useHistory();
+
+    function detalhe(){
+        console.log(post._id)
+        return history.push("/home/produtos/" + post._id);
     }
+    
     let imagem_usada;
     if(decisor == 1){
         imagem_usada = img;
@@ -52,20 +53,19 @@ export function Card({post, decisor}){
         imagem_usada = img2;
           
     }
-    console.log("O que existe no post:");
-    console.log(post);
+
     let fornecedor = post.usuario;
 
     var numero = post.valor_produto;
 
     return (
-        <div className = "card" onClick={redirecionar(post)}>
+        <div className = "card">
              
                 <div className="area_produto">
-                    <img src={imagem_usada} className="img_produto"/>
+                    <img src={imagem_usada} className="img_produto" onClick={detalhe}/>
                     <Favoritar produto_info={post._id} ></Favoritar>
                 </div>
-                <div className="avaliacao_e_ofertante">
+                <div className="avaliacao_e_ofertante"  >
                 <div className="avaliacao">
                         <img src={avaliacao_img} className="avaliacao"/>
                     </div>
@@ -73,7 +73,7 @@ export function Card({post, decisor}){
                        {fornecedor.nome_completo}
                     </div>
                 </div>
-                <div className="dados_produto">
+                <div className="dados_produto" onClick={detalhe}>
                 <div className="nome">
                         {post.nome_produto}
                     </div>
@@ -81,7 +81,40 @@ export function Card({post, decisor}){
                         <div className="cifrao">
                         R$
                         </div>
-                        <div className="preco_numero">
+                        <div className="preco_numero favoritado_n">
+                        {new Intl.NumberFormat('pt-BR').format(numero)}
+                        </div>
+                            
+                    </div>
+                </div>
+
+        </div>
+    )
+}
+
+export function Card_favoritado({post, decisor}){
+    let history = useHistory();
+
+    function detalhe(){
+        console.log(post._id)
+        return history.push("/home/produtos/" + post._id);
+    }
+
+    var numero = post.valor_produto_favoritado;
+
+    return (
+        <div className = "card_favoritado">
+                <div className="avaliacao_e_ofertante"  >
+                </div>
+                <div className="dados_produto" onClick={detalhe}>
+                <div className="nome">
+                        {post.nome_produto}
+                    </div>
+                    <div className="preco n">
+                        <div className="cifrao">
+                        R$
+                        </div>
+                        <div className="preco_numero favoritado_n">
                         {new Intl.NumberFormat('pt-BR').format(numero)}
                         </div>
                             
