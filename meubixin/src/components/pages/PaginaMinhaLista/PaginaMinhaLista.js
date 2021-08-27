@@ -7,6 +7,16 @@ import { Card_favoritado } from "../../commom/Card/Card";
 
 
 export function ConteudoCarrinho({produtos}){
+
+    var total = produtos.reduce(getTotal, 0);
+    var quantidade_itens = produtos.length;
+    function getTotal(total, item) {
+     return total + (item.valor_produto_favoritado);
+    
+    }
+    console.log(total);
+    console.log(quantidade_itens);
+
     let posts = produtos.map((post)=>(<Card_favoritado post={post}> </Card_favoritado>))
 
     return ( 
