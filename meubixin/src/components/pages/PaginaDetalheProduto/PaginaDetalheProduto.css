@@ -154,6 +154,7 @@ color: rgba(0, 0, 0, 0.8);
 .descricao{
     color: rgba(0, 0, 0, 0.60);
     font-size: 18px;
+    width: 60%;
 }
 
 .botoes{

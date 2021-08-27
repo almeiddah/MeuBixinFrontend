@@ -45,6 +45,7 @@ function App() {
           <Route exact path="/meu_perfil" component={PaginaMeuPerfil}></Route>
 
           <Route exact path="/minhalista" component={PaginaMinhaLista}></Route>
+          <Route exact path="/minhalista/_" component={PaginaMinhaLista}></Route>
 
           <Route exact path="/PaginaHomeextend" component={PaginaInserirOferta}></Route>
           <Route exact path="/home/servicos" component={PaginaHomeServicos}></Route>

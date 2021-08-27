@@ -57,7 +57,7 @@ export function PaginaMinhaLista(){
         <br></br>
         <div className="minha_lista">
             <h2>Minha Lista</h2>
-            <h3>Todos os seus produtos aparecerão<br/>aqui na sua lista.</h3>
+            <h3>Todos os produtos aparecerão aqui na<br/> sua lista.</h3>
         </div>
        <ConteudoCarrinho produtos={produtos_f}> </ConteudoCarrinho>
         </div>

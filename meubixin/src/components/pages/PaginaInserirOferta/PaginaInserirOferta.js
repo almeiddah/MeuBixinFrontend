@@ -34,14 +34,14 @@ function FormCadastroProduto(){
                 <input  placeholder="Preço do produto"   name="valor_produto" {...register("valor_produto")}></input><br></br>
             {/* tipo de produto:  */}
                 <select name="tipo_pessoa" type="text"  id="" {...register("tipo_produto")}>
-                        <option>Categoria do produto</option>
+                        <option value="Gerais">Categoria do produto</option>
                         <option value="Gerais">Gerais</option>
                         <option value="higiene">Higiene e acessórios</option>
                         <option value="brinquedo">Diversão</option>
                         <option value="arte">Arte</option>
                 </select>
             {/* Descricao:  */}
-                <input type="text" placeholder="Descrição do produto. obs: Detalhe em tópicos " name="descricao_produto" {...register("descricao_produto")}></input><br></br>
+                <textarea type="text" cols="30" rows="5" placeholder="Descrição do produto. obs: Detalhe em tópicos " name="descricao_produto" {...register("descricao_produto")}></textarea><br></br>
                 {/* Usuario:  */}
                 <input type="text" value={auth._id} name="usuario" {...register("usuario")} className="none"></input><br></br>
                 <Link className="botao_2" to="/meuperfil">Cancelar</Link> <button className="botao">Cadastrar</button>

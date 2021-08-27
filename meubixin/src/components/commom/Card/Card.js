@@ -3,14 +3,13 @@ import img from './imagem_racao.png';
 import img2 from './imagem_coleira.png';
 import avaliacao_img from './avaliacao.svg';
 import {FiHeart} from "react-icons/fi";
-import { inserirProdutoCarrinho } from "../../../api/carrinhoAPI";
+import { desfavoritarProdutoPorUser, inserirProdutoCarrinho } from "../../../api/carrinhoAPI";
 import { useContext} from "react";
 import { AuthContext } from "../../../App";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
-
-
+import {FiTrash} from "react-icons/fi";
 
 function Favoritar({produto_info}){
     let history = useHistory();
@@ -34,8 +33,39 @@ function Favoritar({produto_info}){
         <button className="botao_favoritar"><FiHeart className="add_lista"/></button> 
     </form>
 }
+let cont=0;
 
+function Excluir({produto_info}){
+    let history = useHistory();
+    const {auth} = useContext(AuthContext);
+    let token_id = auth.token;
 
+    const {register,handleSubmit} = useForm();
+    const submeter = (produto_info) =>{
+        console.log(produto_info);
+        desfavoritarProdutoPorUser(token_id, produto_info).then((response)=>{
+            console.log("produto removido", response.data);
+            cont=cont+1;
+            console.log("contador:", cont);
+            if(cont%2 == 0){
+                history.push("/minhalista");
+            }else{
+               
+                history.push("/minhalista/_");
+            }
+        
+            
+            
+        }).catch((error)=>{
+                console.log("erro que da:",error);
+        })
+    };
+     
+    return <form onSubmit={handleSubmit(submeter)}>
+        <input {...register("id")} value={produto_info} className="none" />
+        <button className="botao_favoritar"><FiTrash className="icone_remover"/></button> 
+    </form>
+}
 
 export function Card({post, decisor}){
     let history = useHistory();
@@ -104,10 +134,10 @@ export function Card_favoritado({post, decisor}){
 
     return (
         <div className = "card_favoritado">
-                <div className="avaliacao_e_ofertante"  >
+                <div className="avaliacao_e_ofertante">
                 </div>
-                <div className="dados_produto" onClick={detalhe}>
-                <div className="nome">
+                <div className="dados_produto" >
+                <div className="nome" onClick={detalhe}>
                         {post.nome_produto}
                     </div>
                     <div className="preco n">
@@ -119,7 +149,9 @@ export function Card_favoritado({post, decisor}){
                         </div>
                             
                     </div>
+                    <Excluir produto_info={post._id} ></Excluir>
                 </div>
+              
 
         </div>
     )

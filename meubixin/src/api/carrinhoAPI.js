@@ -1,14 +1,12 @@
 import axios from "axios";
 
-export function desfavoritarProdutoPorUser(token){
+export function desfavoritarProdutoPorUser(token, id){
+    console.log(id.id)
     return axios({
         method: "DELETE",
-        url: "http://localhost:8393/carrinho/:id",
+        url: "http://localhost:8393/carrinho/" + id.id,
         headers:{
             "token": token,
-        },
-        params: {
-            id: this.selectedRoute
         }
     })
 }
