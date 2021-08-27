@@ -20,9 +20,16 @@ export function ConteudoCarrinho({produtos}){
     let posts = produtos.map((post)=>(<Card_favoritado post={post}> </Card_favoritado>))
 
     return ( 
-            <div className="conteudo_favoritado">
+        <div className="carrinho">
+        <div className="conteudo_favoritado">
                {posts}
-            </div>
+        </div>
+        <div className="dados_favoritado">
+            <h3 className="dados">Dados da lista</h3>
+            <div className="qtd"><h1>Quantidade de ítens</h1><h2>{quantidade_itens} Produtos</h2></div>
+            <div className="valor_total"><h1>Valor Total</h1><h2>R$ {total}</h2></div>
+        </div>
+        </div>
             )
 }
 

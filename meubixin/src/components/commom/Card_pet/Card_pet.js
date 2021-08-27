@@ -1,15 +1,21 @@
 import "./Card_pet.css";
 import img from "./cachorro.png";
 import { Link } from "react-router-dom";
-
+import { useHistory } from "react-router";
 
 function Botao(){
     return <Link className="botao_pet">Conhecer pet</Link>
 }
 export function Card_pet({post}){
     console.log(post);
+    let history = useHistory();
+    function detalhe(){
+        console.log(post._id)
+        return history.push("/home/pets/" + post._id);
+    }
+    
     return (
-        <div className = "card2">
+        <div className = "card2" onClick={detalhe}>
             <div className="conteudo_texto">
             <div className="nome2">
                         {post.nome_pet}

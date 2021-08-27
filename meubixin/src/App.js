@@ -18,6 +18,7 @@ import { PaginaDetalheproduto } from './components/pages/PaginaDetalheProduto/Pa
 import { PaginaInserirOferta_Servico } from './components/pages/PaginaInserirOferta/PaginaInserirOferta_Servico';
 import { PaginaInserirOferta_Pet } from './components/pages/PaginaInserirOferta/PaginaInserirOferta_Pet';
 import { PaginaMinhaLista } from './components/pages/PaginaMinhaLista/PaginaMinhaLista';
+import { PaginaDetalhePet } from './components/pages/PaginaDetalhePet/PaginaDetalhePet';
 
 export const AuthContext = createContext(null);
 
@@ -57,6 +58,7 @@ function App() {
           <Route exact path="/meuperfil/adicionarServico" component={PaginaInserirOferta_Servico}></Route>
           <Route exact path="/meuperfil/adicionarPet" component={PaginaInserirOferta_Pet}></Route>
           <Route exact path="/home/produtos/:id" component={PaginaDetalheproduto}></Route>
+          <Route exact path="/home/pets/:id" component={PaginaDetalhePet}></Route>
         
         
         </BrowserRouter>

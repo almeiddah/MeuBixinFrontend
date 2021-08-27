@@ -9,7 +9,16 @@ export function listarPets(token,especie){
         }
     })
 }
-
+export function listarPet(token,id){
+    let new_id = id.match.params.id;
+    return axios({
+        method:"GET",
+        url: "http://localhost:8393/pet/" +new_id,
+        headers: {
+            "token" : token,
+        }
+    })
+}
 export function listarPetsPorUser(token,id){
     return axios({
         method:"GET",
